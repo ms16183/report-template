@@ -1,0 +1,43 @@
+\documentclass{jsarticle}
+
+\usepackage{okumacro}
+\usepackage{amsmath,amssymb}
+
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\suffix}[2]{#1_\mathrm{#2}}
+\newcommand{\mami}{\begin{center}ティロ・フィナーレ\end{center}}
+
+\begin{document}
+
+\part{ラインの黄金}
+あいうえお
+\paragraph{パラグラフ}
+かきくけこ
+
+Lucy in the Sky with (\ \ \ \ \ \ \ \ \ \ ).
+
+\LaTeX{} is XXX!
+
+\ruby{魔弾の舞踏}{ダンザデルマジックバレット} \par
+\mami
+\mami
+\mami
+\[ \abs{\dot{V}} = \sqrt{a^2+b^2} \]
+\[ \suffix{V}{in} = 0 \]
+
+\LaTeX の数式モードでは，イタリック体とは微妙に異なる．
+$The difference story$と\textit{The Difference story}．\par
+
+$2^10 = 1024$は間違いです．括弧で囲みましょう． $2^{10} = 1024$
+
+次に，\AmS-\LaTeX を使う．
+\begin{equation}
+    A = \begin{pmatrix}
+        a_{11} & a_{12} \\
+        a_{21} & a_{22} \\
+    \end{pmatrix}
+\end{equation}
+$ a_1, a_2 \dots a_n$
+
+\end{document}
+
