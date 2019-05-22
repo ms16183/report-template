@@ -1,5 +1,50 @@
+%\usepackage[top=35.01truemm,bottom=30truemm,left=30truemm,right=30truemm]{geometry}
 \usepackage[dvipdfmx]{graphicx}
+\usepackage{tabularx}
+       \newcolumntype{C}{>{\centering\arraybackslash}X}
+       \newcolumntype{L}{>{\raggedright\arraybackslash}X}
+       \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
 \usepackage{float}
-\usepackage{amsmath,amssymb}
+\usepackage{amsmath, amssymb}
+\usepackage{ascmac}
+%\usepackage{listings, jlisting}
+\usepackage{listings}
+% Rotate pdf.
+%\usepackage{pdflscape}
+%\usepackage{everypage}
+%\newcommand{\Lpagenumber}{\ifdim\textwidth=\linewidth\else\bgroup
+%  \dimendef\margin=0 %use \margin instead of \dimen0
+%  \ifodd\value{page}\margin=\oddsidemargin
+%  \else\margin=\evensidemargin
+%  \fi
+%  \raisebox{\dimexpr -\topmargin-\headheight-\headsep-0.5\linewidth}[0pt][0pt]{%
+%    \rlap{\hspace{\dimexpr \margin+\textheight+\footskip}%
+%    \llap{\rotatebox{90}{\thepage}}}}%
+%\egroup\fi}
+%\AddEverypageHook{\Lpagenumber}%
+\usepackage{lscape}
 
-\newcommand{\mami}{ティロ・フィナーレ}
+\lstset{
+  basicstyle=\ttfamily,
+  identifierstyle={\small},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=fixed, %[l]{fullflexible},
+  basewidth=0.45em, 
+  numbers=left,
+  xrightmargin=0zw,
+  xleftmargin=3zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  keepspaces=true,
+  lineskip=-0.5ex
+}
+\renewcommand{\lstlistingname}{プログラムリスト}
+
+%\fontsize{10.539pt}{15.809pt}\selectfont
+
