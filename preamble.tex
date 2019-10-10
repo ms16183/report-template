@@ -6,7 +6,7 @@
        \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
 \usepackage{float}
 \usepackage{amsmath, amssymb}
-\usepackage{ascmac}
+%\usepackage{ascmac}
 %\usepackage{listings, jlisting}
 \usepackage{listings}
 % Rotate pdf.
@@ -22,13 +22,14 @@
 %    \llap{\rotatebox{90}{\thepage}}}}%
 %\egroup\fi}
 %\AddEverypageHook{\Lpagenumber}%
-\usepackage{lscape}
-\usepackage[dvipdfmx]{hyperref}
-\usepackage{pxjahyper}
+%\usepackage{lscape}
 
-\hypersetup{
-    bookmarksnumbered
-}
+%\usepackage[dvipdfmx]{hyperref}
+%\usepackage{pxjahyper}
+%
+%\hypersetup{
+%    bookmarksnumbered
+%}
 
 \lstset{
   basicstyle=\ttfamily,
@@ -51,6 +52,14 @@
   lineskip=-0.5ex
 }
 \renewcommand{\lstlistingname}{プログラムリスト}
+
+\newcommand{\image}[2]{
+  \begin{figure}[H]
+  \centering
+    \includegraphics[width=10cm]{./data/#1.png}
+    \caption{#2} \label{fig:#1}
+  \end{figure}
+}
 
 %\fontsize{10.539pt}{15.809pt}\selectfont
 
