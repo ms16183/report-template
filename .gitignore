@@ -3,6 +3,8 @@
 *.dvi
 *.log
 *.pdf
+*.out
+*.toc
 
 # Other data(e.g. png, py, pdf...)
 data/*
