@@ -6,5 +6,6 @@
 *.out
 *.toc
 
-# Other data(e.g. png, py, pdf...)
+# Data
 data/*
+!data/example.tex

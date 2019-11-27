@@ -1,0 +1,52 @@
+% Margin
+\usepackage[top=35.01truemm,bottom=30truemm,left=30truemm,right=30truemm]{geometry}
+
+% Rotate pdf.
+\usepackage{pdflscape}
+\usepackage{everypage}
+\newcommand{\Lpagenumber}{\ifdim\textwidth=\linewidth\else\bgroup
+  \dimendef\margin=0 %use \margin instead of \dimen0
+  \ifodd\value{page}\margin=\oddsidemargin
+  \else\margin=\evensidemargin
+  \fi
+  \raisebox{\dimexpr -\topmargin-\headheight-\headsep-0.5\linewidth}[0pt][0pt]{%
+    \rlap{\hspace{\dimexpr \margin+\textheight+\footskip}%
+    \llap{\rotatebox{90}{\thepage}}}}%
+\egroup\fi}
+\AddEverypageHook{\Lpagenumber}%
+\usepackage{lscape}
+
+% Anchor
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper}
+
+\hypersetup{
+    bookmarksnumbered
+}
+
+% Font size
+\fontsize{10.539pt}{15.809pt}\selectfont
+
+% --Image--
+\begin{figure}[H]
+\centering
+    \includegraphics[width=10cm,height=10cm]{./data/.png}
+    \caption{} \label{fig:}
+\end{figure}
+
+% --Table--
+\begin{table}[htb]
+\centering
+\caption{}
+\scalebox{0.8}{
+\begin{tabular}{|l|l|l|} \hline
+    \multicolumn{1}{|c}{}  &
+    \multicolumn{1}{|c}{}  &
+    \multicolumn{1}{|c|}{} \\ \hline \hline
+
+    a & b & c \\ \hline
+
+
+\end{tabular}
+}
+\end{table}
