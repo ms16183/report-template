@@ -1,6 +1,3 @@
-% Margin
-\usepackage[top=35.01truemm,bottom=30truemm,left=30truemm,right=30truemm]{geometry}
-
 % Rotate pdf.
 \usepackage{pdflscape}
 \usepackage{everypage}
@@ -27,6 +24,10 @@
 % Font size
 \fontsize{10.539pt}{15.809pt}\selectfont
 
+% nested itemize point
+\renewcommand{\labelitemii}{$\circ$}
+
+
 % --Image--
 \begin{figure}[H]
 \centering
@@ -45,7 +46,6 @@
     \multicolumn{1}{|c|}{} \\ \hline \hline
 
     a & b & c \\ \hline
-
 
 \end{tabular}
 }
