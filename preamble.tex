@@ -41,6 +41,42 @@
     \caption{#2} \label{fig:#1}
   \end{figure}
 }
+
+\newcommand{\imagehh}[4]{
+  \begin{figure}[H]
+    \begin{minipage}{0.5\hsize}
+      \centering
+      \includegraphics[width=7cm]{./data/#1.png}
+      \caption{#2} \label{fig:#1}
+    \end{minipage}
+    \begin{minipage}{0.5\hsize}
+      \centering
+      \includegraphics[width=7cm]{./data/#3.png}
+      \caption{#4} \label{fig:#3}
+    \end{minipage}
+  \end{figure}
+}
+
+\newcommand{\imagehhh}[6]{
+  \begin{figure}[H]
+    \begin{minipage}{0.333\hsize}
+      \centering
+      \includegraphics[width=6cm]{./data/#1.png}
+      \caption{#2} \label{fig:#1}
+    \end{minipage}
+    \begin{minipage}{0.333\hsize}
+      \centering
+      \includegraphics[width=6cm]{./data/#3.png}
+      \caption{#4} \label{fig:#3}
+    \end{minipage}
+    \begin{minipage}{0.333\hsize}
+      \centering
+      \includegraphics[width=6cm]{./data/#5.png}
+      \caption{#6} \label{fig:#5}
+    \end{minipage}
+  \end{figure}
+}
+
 \setcounter{tocdepth}{3}
 
 % --画像--
