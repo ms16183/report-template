@@ -1,24 +1,11 @@
-main.pdf: main.tex *.tex
-	platex -halt-on-error -interaction=batchmode main
-	platex -halt-on-error -interaction=batchmode main
-	dvipdfmx main
+run: main.tex
+	latexmk -gg -r .latexmkrc $<
 
-main.bbl: *.bib
-	pbibtex main
+pvc: main.tex
+	latexmk -gg -r .latexmkrc -pvc $<
 
 clean:
-	rm -f main.pdf main.bbl
-	rm -f *.aux
-	rm -f *.lof
-	rm -f *.log
-	rm -f *.lot
-	rm -f *.fls
-	rm -f *.out
-	rm -f *.toc
-	rm -f *.fmt
-	rm -f *.fot
-	rm -f *.cb
-	rm -f *.cb2
-	rm -f .*.lb
+	latexmk -C *.tex
 
-.PHONY: clean
+
+.PHONY: run pvc clean
