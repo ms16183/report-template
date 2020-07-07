@@ -1,6 +1,6 @@
 main.pdf: main.tex *.tex
-	platex -halt-on-error main
-	platex -halt-on-error main
+	platex -halt-on-error -interaction=batchmode main
+	platex -halt-on-error -interaction=batchmode main
 	dvipdfmx main
 
 main.bbl: *.bib
